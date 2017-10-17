@@ -42,7 +42,7 @@ public class Punkty {
         for (int i=0; i<Uwsp.length;i++)
             Uwsp[i][12] = "|";
         //Stworzenie Osi y
-        for (int j=0;j<Uwsp[6].length;j++) //wpisalem [6] bo nie dzialalo - dlaczego to dziala teraz ? Co bierze dlugosc tablicy z 6 "kolumny"? jak zrobic aby bralo z Uwsp[i].lenght ?
+        for (int j=0;j<Uwsp[6].length;j++) //wpisalem [6] bo nie dzialalo - jak zrobic aby bralo dlugosc tablicy po y? cos ala Uwsp[i].lenght ?
             Uwsp[6][j] = "_";
 
 
