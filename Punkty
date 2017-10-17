@@ -5,59 +5,47 @@ public class Punkty {
         int b;
 
         System.out.println ("Podaj wsp. x od -6 do 6 ");
-        Scanner odczyt_a = new Scanner (System.in);
-        a = odczyt_a.nextInt ();
-        if (a<-6 || a>6) {
+        Scanner odczytA = new Scanner (System.in);
+        a = odczytA.nextInt ();
             while (a<-6 || a>6) {
                 System.out.println ("Glupcze naucz sie czytac.\n Podaj jeszcze raz wsp. x od -6 do 6 ");
-                Scanner odczyt_a2 = new Scanner (System.in);
-                a = odczyt_a2.nextInt ( );
+                a = odczytA.nextInt ();
             }
-        }
 
 
         System.out.println ("Podaj wsp. y od -6 do 6 ");
-        Scanner odczyt_b = new Scanner (System.in);
-        b = odczyt_b.nextInt ();
-        if (b<-6 || b>6) {
+        b = odczytA.nextInt ();
             while (b<-6 || b>6) {
                 System.out.println ("Glupcze naucz sie czytac.\n Podaj jeszcze raz wsp. y od -6 do 6 ");
-                Scanner odczyt_b2 = new Scanner (System.in);
-                b = odczyt_b2.nextInt ( );
+                b = odczytA.nextInt ( );
             }
-        }
 
 
 
-       // Uklad wsp.
+        // Uklad wsp.
 
         String [][] Uwsp = new String[13][25];
 
 
-        for (int i=0; i<Uwsp.length; i++)
-            for (int j=0; j<Uwsp[i].length;j++)
-                Uwsp[i][j] =" ";
-
-        //Stworzenie Osi x
-        for (int i=0; i<Uwsp.length;i++)
-            Uwsp[i][12] = "|";
-        //Stworzenie Osi y
-        for (int j=0;j<Uwsp[6].length;j++) //wpisalem [6] bo nie dzialalo - jak zrobic aby bralo dlugosc tablicy po y? cos ala Uwsp[i].lenght ?
-            Uwsp[6][j] = "_";
-
-
+        for (int i=0; i<Uwsp.length; i++) {
+            for (int j = 0; j < Uwsp[i].length; j++) {
+                Uwsp[i][j] = " ";
+        //osie
+                if (j == 12)
+                    Uwsp[i][j] = "|";
+                else if (i == 6)
+                    Uwsp[i][j] = "_";
+            }
+        }
 
         Uwsp[(-1)*b+6][2*a+12] = "#";
-      //Wyswietlenie Ukladu wsp
+        //Wyswietlenie Ukladu wsp
 
         for (int i=0;i<Uwsp.length;i++){
             for(int j=0;j<Uwsp[i].length;j++)
-                System.out.print(Uwsp[i][j]);
-                System.out.println();
+                System.out.print (Uwsp[i][j]);
+                System.out.println ( );
         }
-
-
-
 
     }
 }
