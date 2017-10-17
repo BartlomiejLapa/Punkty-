@@ -24,26 +24,26 @@ public class Punkty {
 
         // Uklad wsp.
 
-        String [][] Uwsp = new String[13][25];
+        String [][] uWsp = new String[13][25];
 
 
-        for (int i=0; i<Uwsp.length; i++) {
-            for (int j = 0; j < Uwsp[i].length; j++) {
-                Uwsp[i][j] = " ";
+        for (int i=0; i<uWsp.length; i++) {
+            for (int j = 0; j < uWsp[i].length; j++) {
+                uWsp[i][j] = " ";
         //osie
                 if (j == 12)
-                    Uwsp[i][j] = "|";
+                    uWsp[i][j] = "|";
                 else if (i == 6)
-                    Uwsp[i][j] = "_";
+                    uWsp[i][j] = "_";
             }
         }
 
-        Uwsp[(-1)*b+6][2*a+12] = "#";
+        uWsp[(-1)*b+6][2*a+12] = "#";
         //Wyswietlenie Ukladu wsp
 
-        for (int i=0;i<Uwsp.length;i++){
-            for(int j=0;j<Uwsp[i].length;j++)
-                System.out.print (Uwsp[i][j]);
+        for (int i=0;i<uWsp.length;i++){
+            for(int j=0;j<uWsp[i].length;j++)
+                System.out.print (uWsp[i][j]);
                 System.out.println ( );
         }
 
